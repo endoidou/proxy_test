@@ -1,9 +1,10 @@
 class User {
-  late String avatarUrl;
-  late String name;
+  User(this.avatarUrl, this.name);
 
-  User.fromJson(Map<String, dynamic> json) {
-    avatarUrl = json['avatar_url'];
-    name = json['name'];
-  }
+  final String avatarUrl;
+  final String name;
+
+  User.fromJson(Map<String, dynamic> json)
+      : avatarUrl = json['avatar_url'],
+        name = json['name'];
 }
